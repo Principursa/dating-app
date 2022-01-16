@@ -12,6 +12,7 @@ import Header from './components/header/Header';
 import Profile from './pages/Profile';
 import Girls from './pages/Girls';
 import Guys from './pages/Guys';
+import Main from './pages/Main';
 
 function App() {
   return (
@@ -21,9 +22,10 @@ function App() {
       <Header/>
       <Routes>
         <Route exact path="/" element={<Home/>}>
-        <Route exact path="/profile" element={<Profile/>}/>
-        <Route exact path="/girls" element={<Girls/>}/>
-        <Route exact path="/guys" element={<Guys/>}/>
+        <Route  path="/profile" element={<Profile/>}/>
+        <Route  path="/girls" element={<Girls/>}/>
+        <Route  path="/guys" element={<Guys/>}/>
+        <Route exact path="/" element={<Main/>}/>
         </Route>
       </Routes>
       </Router>
