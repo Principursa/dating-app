@@ -1,13 +1,11 @@
-
 import React from 'react'
 
-function Profile() {
+function hero() {
     return (
         <div>
-            this is the profile
             
         </div>
     )
 }
 
-export default Profile
+export default hero

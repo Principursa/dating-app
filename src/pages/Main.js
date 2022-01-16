@@ -1,13 +1,13 @@
 
 import React from 'react'
 
-function Profile() {
+function Main() {
     return (
         <div>
-            this is the profile
+            this is the main page
             
         </div>
     )
 }
 
-export default Profile
+export default Main

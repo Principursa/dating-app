@@ -66,7 +66,7 @@ function Wallet() {
         </StyledButton>
       ) : (
         <div>
-          <StyledButton onClick={onClick}>Connect</StyledButton>
+          <StyledButton >Welcome to Cherry Blossom</StyledButton>
         </div>
       )}
     </>
