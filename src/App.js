@@ -20,10 +20,11 @@ function App() {
       <Router>
       <Header/>
       <Routes>
-        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/" element={<Home/>}>
         <Route exact path="/profile" element={<Profile/>}/>
         <Route exact path="/girls" element={<Girls/>}/>
         <Route exact path="/guys" element={<Guys/>}/>
+        </Route>
       </Routes>
       </Router>
     </div>

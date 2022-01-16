@@ -9,6 +9,8 @@ import ButtonStyled from "../components/button/button"
 import  styled from "styled-components";
 import CardStyled from "../components/card/card";
 import Header from "../components/header/Header";
+import { Outlet } from "react-router";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   justify-content: center;
@@ -66,32 +68,43 @@ function Home() {
         
         <CardStyled>
             <div>
+
+                    <Link to="/">
                 <h2>
                 Cherry Blossom
                 </h2>
+
+                </Link>
                 </div>
+
         <ul>
             <li>
                 <a href="#">
+                    <Link to="/profile">
                     <h3>
                         My Profile
                     </h3>
+                    </Link>
                 </a>
             </li>
             <li>
 
                 <a href="#">
+                    <Link to="/guys">
                     <h3>
                     View Guys
                     </h3>
+                    </Link>
                     </a>
             </li>
             <li>
 
                 <a href="#"> 
+                <Link to="girls">
                 <h3>
                 View Girls
                 </h3>
+                </Link>
                 </a>
             </li>
         </ul>
@@ -105,7 +118,7 @@ function Home() {
       minWidth: 320
     }}>
         <CardStyled>
-            Main Content
+            <Outlet/>
         </CardStyled>
   </Box>
 </Flex>

@@ -5,6 +5,7 @@ function Girls() {
     return (
         <div>
             
+            this is the girls page
         </div>
     )
 }
