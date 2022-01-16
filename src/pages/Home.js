@@ -8,6 +8,7 @@ import { Card } from "rebass";
 import ButtonStyled from "../components/button/button"
 import  styled from "styled-components";
 import CardStyled from "../components/card/card";
+import Header from "../components/header/Header";
 
 const Wrapper = styled.div`
   align-items: center;
@@ -24,7 +25,13 @@ a{
     font-size: large;
 }
 
+.Main{
+    background-color: black;
+}
 `;
+const CardWrapper = styled.div`
+
+`
 function Home() {
   const { chainId, account, activate, active, library } = useWeb3React();
   const onClick = async () => {
@@ -34,15 +41,16 @@ function Home() {
     <>
       {active ? (
           <Wrapper>
+              <Header/>
 <Flex
   sx={{
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   }}>
   <Box
     sx={{
       p: 3,
       flexGrow: 1,
-      flexBasis: 256
+      flexBasis: 350
     }}>
         
         <CardStyled>
@@ -71,7 +79,9 @@ function Home() {
       flexBasis: 0,
       minWidth: 320
     }}>
-    Main Content
+        <CardStyled>
+            Main Content
+        </CardStyled>
   </Box>
 </Flex>
         </Wrapper>
