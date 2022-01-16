@@ -8,19 +8,18 @@ const Wrapper = styled(Card)`
 
 //font-family: 'Roboto', sans-serif;
 height: 40em;
-width: 15em;
 text-align: center;
 ::selection {
   background-color: #a13398c5;
 }
 font-size: 1.5em;
 border-radius: 10px;
-border: 5px solid;
+border: 4px solid;
 border-color: #703042;
 background-color: #af335213;   
 backdrop-filter: blur(4px);
 color: white;
-padding: 2em;
+padding: 1.5em;
 /* border: 5px solid;
 border-image-slice: 1;
 border-width: 4px;
