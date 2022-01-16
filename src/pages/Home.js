@@ -70,9 +70,9 @@ function Home() {
             <div>
 
                     <Link to="/">
-                <h2>
+                <h1>
                 Cherry Blossom
-                </h2>
+                </h1>
 
                 </Link>
                 </div>
