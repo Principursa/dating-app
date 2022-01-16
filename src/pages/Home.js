@@ -53,7 +53,6 @@ function Home() {
     <>
       {active ? (
           <Wrapper>
-              <Header/>
 <Flex
   sx={{
     flexWrap: 'wrap',
