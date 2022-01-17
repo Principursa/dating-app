@@ -10,7 +10,16 @@ function Profile() {
   const { chainId, account, activate, active, library } = useWeb3React();
   const [isRegistered, setisRegistered] = useState(false);
   const [pohStatus, setpohStatus] = useState({});
+  const [emeraldBalance,setEmeraldBalance]=useState(0);
+  const [fantomBalance,setFantomBalance]=useState(0);
+  const [bscBalance,setBscBalance]=useState(0);
   let dummyaddress = "0xf49a19f72d0e106df462cfd6b5bebe42b6001616";
+useEffect(async () => {
+        setFantomBalance(await getBalance('FANTOM',account));
+                 setEmeraldBalance(await getBalance('EMERALD',account));
+                 setBscBalance(await getBalance('BSC',account));
+                  var status=await getProofOfHumanity('0xf49a19f72d0e106df462cfd6b5bebe42b6001616');
+  }, []);
 
   useEffect(async () => {
     var status = await getProofOfHumanity(dummyaddress);
@@ -24,6 +33,10 @@ function Profile() {
     <>
       {isRegistered ? (
         <div>
+	      <div>Rose Balance {emeraldBalance}</div>
+            <div>Fantom Balance {fantomBalance}</div>
+            <div>Bsc Balance {bscBalance}</div>
+
           <div>
             <h2>{pohStatus.first_name + " " + pohStatus.last_name}</h2>
           </div>
