@@ -15,8 +15,6 @@ useEffect(async () => {
 		 setEmeraldBalance(await getBalance('EMERALD',account));
 		 setPolygonBalance(await getBalance('POLYGON',account));
 		  var status=await getProofOfHumanity('0xf49a19f72d0e106df462cfd6b5bebe42b6001616');
-		  console.log(status)
-		  setpohStatus(JSON.stringify(status));
   }, []);
 
     return (
@@ -26,8 +24,6 @@ useEffect(async () => {
 	    <div>Rose Balance {emeraldBalance}</div>
 	    <div>Fantom Balance {fantomBalance}</div>
 	    <div>Polygon Balance {polygonBalance}</div>
-	    <div> Proof Of Humanity Infobelow</div>
-	    <div>{pohStatus}</div>
 	 </>
     )
 }

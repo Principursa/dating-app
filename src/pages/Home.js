@@ -71,7 +71,7 @@ function Home() {
 
                     <Link to="/">
                 <h1>
-                Cherry Blossom
+                    Pandoro
                 </h1>
 
                 </Link>

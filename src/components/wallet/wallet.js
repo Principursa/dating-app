@@ -66,7 +66,7 @@ function Wallet() {
         </StyledButton>
       ) : (
         <div>
-          <StyledButton >Welcome to Cherry Blossom</StyledButton>
+          <StyledButton >Welcome to Pandoro!</StyledButton>
         </div>
       )}
     </>
