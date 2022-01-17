@@ -22,10 +22,9 @@ function App() {
       <Header/>
       <Routes>
         <Route exact path="/" element={<Home/>}>
-        <Route  path="/profile" element={<Profile/>}/>
         <Route  path="/girls" element={<Girls/>}/>
         <Route  path="/guys" element={<Guys/>}/>
-        <Route exact path="/" element={<Main/>}/>
+        <Route exact path="/" element={<Profile/>}/>
         </Route>
       </Routes>
       </Router>
