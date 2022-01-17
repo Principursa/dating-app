@@ -1,18 +1,18 @@
-//returns either the balance or an error message
+//returns either the balance in rose or an error message
 async function getBalance(address) {
 	//fetch balance from https://explorer.emerald.oasis.munay.network/api
 	try{
-	var balance= await fetch('https://explorer.emerald.oasis.munay.network/api/?module=account&action=tokenlist&address='+address);
+	var balance= await fetch('https://explorer.emerald.oasis.munay.network/api/?module=account&action=balance&address='+address);
 		//check if response is ok
 		if(balance.ok){
 			//get json from response
 			var balanceJSON= await balance.json()
 			//return balance
-			return balanceJSON
+			return (balanceJSON.result/(10**18))
 		}
 		else{
 			//return error
-			throw "error"
+			throw balanceJSON.status
 		}
 }
 catch(err){
@@ -24,7 +24,7 @@ catch(err){
 async function getProofOfHumanity(address) {
 	//fetch proof of Humanity JSON from 
 	try{
-	var proofOfHumanity= await fetch('https://explorer.emerald.oasis.munay.network/api/?module=account&action=tokenlist&address='+address);
+	var proofOfHumanity= await fetch('https://api.poh.dev/profiles/'+address);
 		//check if response is ok
 		if(proofOfHumanity.ok){
 			//get json from response
@@ -34,7 +34,7 @@ async function getProofOfHumanity(address) {
 		}
 		else{
 			//return error
-			throw 'response.status+response.statusText'
+			throw proofOfHumanity.json()
 		}
 }
 catch(err){
