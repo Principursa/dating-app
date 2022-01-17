@@ -33,24 +33,29 @@ useEffect(async () => {
     <>
       {isRegistered ? (
         <div>
-	      <div>Rose Balance {emeraldBalance}</div>
             <div>Fantom Balance {fantomBalance}</div>
             <div>Bsc Balance {bscBalance}</div>
+	      <div>Rose Balance {emeraldBalance}</div>
 
           <div>
             <h2>{pohStatus.first_name + " " + pohStatus.last_name}</h2>
           </div>
-          <br />
           <div>#{pohStatus.vanity_id}</div>
           <br />
+	      <video controls muted width="250" autoPlay >
+    <source src={pohStatus.video} type="video/mp4"/>
+    Sorry, your browser doesn't support embedded videos.
+</video>
+	      <br />
           <div>
-            <Image
+
+	      {/*<Image
               src={pohStatus.photo}
               sx={{
-                width: ["100%", "40%"],
+                width: ["50%", "40%"],
                 borderRadius: 8,
               }}
-            />
+            />*/}
           </div>
           <div>
             <a href={pohStatus.bio}>Bio</a>
